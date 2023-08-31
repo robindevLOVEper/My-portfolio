@@ -90,3 +90,51 @@ document.addEventListener("visibilitychange", function() {
 
 
 
+const fname =document.getElementById('fname');
+const email =document.getElementById('email');
+const project =document.getElementById('project');
+const message =document.getElementById('msg');
+const submit =document.getElementsByClassName('contact__form')[0];
+
+submit.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    console.log("clicked");
+
+
+
+    let ebody = `
+    <b>Name:&nbsp;</b>${fname.value}
+    <br>
+    <br>
+    
+    <b>Email:&nbsp;</b>${email.value}
+    <br>
+    <br>
+    <br>
+    <b>Project:&nbsp;</b>${project.value}
+    <br>
+    <br>
+    
+    <b>Message:&nbsp;</b>${message.value}
+    
+    
+  
+    `
+    
+    
+
+
+    Email.send({
+        SecureToken : "4a3eb943-548d-4b9f-835b-d93f9032fff0",
+        To : 'robin7hacker@gmail.com',
+        From : "robin7hacker@gmail.com",
+        Subject : "Email From Robin Website ",
+        Body : ebody
+    }).then(
+      message => alert(message)
+    );
+})
+
+
+
+

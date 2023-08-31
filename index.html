@@ -6,6 +6,7 @@
     
         <!-- ===== CSS ===== -->
         <link rel="stylesheet" href="style.css">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
        
         <!-- ===== BOX ICONS ===== -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -441,21 +442,23 @@
                 <span class="section-subtitle">Contact Me</span>
                 <h2 class="section-title">Get In Touch</h2>
                 <div class="contact__container bd-grid">
-                    <form action="mail.php" class="contact__form" method="POST">
+                    <form action="#" class="contact__form" method="POST">
                         <div class="contact__inputs">
-                            <input type="text" name="name" placeholder="Name" class="contact__input" required >
+                            <input id="fname" type="text" name="name" placeholder="Name" class="contact__input" required >
                             
-                            <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                            <input id="email" type="email" name="email" placeholder="Email" class="contact__input" required>
                             
                         </div>
-                             <input type="text" name="project" placeholder="Project" class="contact__input" required>
+                             <input id="project" type="text" name="project" placeholder="Project" class="contact__input" required>
 
-                             <textarea name="message" id="" cols="30" rows="10" placeholder="Message" class="contact__input" required></textarea>
+                             <textarea name="message" id="msg" cols="30" rows="10" placeholder="Message" class="contact__input" required></textarea>
 
-                              <input type="submit" value="Send Message" name="submit" class="button contact__button">
+                              <input id="submit" type="submit" value="Send Message" name="submit" class="button contact__button">
  
                     </form>
                     <div>
+
+                      
                         
                         <div class="contact__info">
                             <h3 class="contact__subtitle">Call Me</h3>
